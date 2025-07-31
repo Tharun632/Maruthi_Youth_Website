@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style .css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="style .css" />
+    <title>Donation|Maruthi Youth utsav Committee</title>
+    <style>
+       
+      body {
+        background-color:whitesmoke;
+        color: #333;
+        line-height: 1.6;
+        text-align: center;
+        position: relative;
+         font-family: "Poppins", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-color: whitesmoke;
+        color: #333;
+        line-height: 1.6;
+        text-align: center;
+        position: relative;
+      }
+
+       .blink-text {
+  font-size: 0.7rem;
+  font-weight: bold;
+  animation: blink 3s infinite;
+   transition: color 0.5s ease-in-out;
+  margin-top: 9px;
+}
+
+/* Multicolor blinking animation */
+@keyframes blink {
+  0%   { color: red; }
+  20%  { color: orange; }
+  40%  { color: yellow; }
+  60%  { color: green; }
+  80%  { color: blue; }
+  100% { color: violet; }
+}
+
+           /*Header starts here*/
+           .header {
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  margin-top: 10px;
+  z-index: 1000;
+}
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Header buttons container */
+.header-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* Common styles for both buttons */
+.header-links a {
+  background: #fff;
+  color: #ff5722;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.header-links a:hover {
+  background: #ff5722;
+  color: white;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 10px 15px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .logo-container img {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .logo-container h1 {
+    display: none; /* Hide text on small screens */
+  }
+
+  .header-links {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 1;
+    overflow-x: auto; /* Ensures links stay in a single line and are scrollable if needed */
+  }
+
+  .header-links a {
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+      /*header endes here*/
+
+      .nav {
+  padding: 6px 12px;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #180701;
+  padding: 4px;
+  display: none;
+  z-index: 1100;
+}
+
+.close-icon {
+  font-size: 1rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin: 10%;
+  display: none;
+}
+
+.dropdown {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #ff5722;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown a:hover {
+  background: #ff5722;
+  color: white;
+}
+
+.about-menu {
+  position: relative;
+}
+
+.about-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.about-submenu a {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 769px) {
+  .menu-icon, .close-icon {
+    display: none;
+  }
+
+  .about-menu:hover .about-submenu {
+    display: flex;
+  }
+
+  .dropdown {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 6px 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .dropdown.show {
+    left: 0;
+  }
+
+  .close-icon {
+    display: block;
+  }
+
+  .about-submenu {
+    position: static;
+    box-shadow: none;
+    background: none;
+    padding-left: 20px;
+  }
+
+  .about-submenu a {
+    background: white;
+    border-top: 1px solid #ddd;
+  }
+
+  .about-submenu.show {
+    display: flex;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+   
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #a52a2a;
+}
+
+.donation-box {
+    text-align: left;
+    padding: 20px;
+}
+
+h2 {
+    color: #b22222;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.qr-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.qr-section img {
+    width: 300px;
+    border: 3px solid #d9534f;
+    border-radius: 15px;
+}
+
+.qr-text {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.info-box {
+    background: #f5f5f5;
+    padding: 15px;
+    border-left: 5px solid #b22222;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+h3 {
+    color: #b22222;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .donation-box {
+        padding: 15px;
+    }
+
+    .qr-section img {
+        width: 180px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .qr-section img {
+        width: 150px;
+    }
+
+    .info-box {
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}
+
+   /*Mobile starts Here*/
+    .mobile-bottom-nav {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 4px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  border-top: 1px solid #444;
+}
+
+.mobile-bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-bottom-nav i {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+/* Hide nav on larger screens */
+@media (min-width: 768px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+/*Mobile nav endes here*/
+   @media(max-width:768px){
+  footer{
+    margin-bottom: 30px;
+    padding-bottom: 70px;
+  }
+}
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="blink-text">
+      ✨ ఏకదంతాయ విద్మహే వక్రతుండాయ ధీమహి తన్నో దంతీ ప్రచోదయాత్ ✨
+    </div>
+
+    <header class="header">
+      <div class="logo-container">
+        <img src="images/logo1.png" alt="Maruthi Youth Association Logo" />
+        <h1>MARUTHI YOUTH UTSAV COMMITEE</h1>
+      </div>
+      <div class="header-links">
+        <a href="https://www.youtube.com/live/UljNaJqMz3M?si=yi4G_SDqFs4dOksh" target="_blank" class="live-puja-link">
+          Live Puja
+        </a>
+        <a href="ehundi.html" target="_blank" class="e-hundi-link">
+          E-Hundi
+        </a>
+        <a href="bookingform.html" target="_blank" class="e-hundi-link">
+          Pooja Form
+        </a>
+      </div>
+    </header>
+
+  <nav class="nav">
+  <span class="menu-icon" id="menuToggle">☰</span>
+
+  <div class="dropdown" id="mainMenu">
+    <span class="close-icon" id="closeMenu">✖️</span>
+
+    <a href="page.html"><i class="fa fa-home"></i> Home</a>
+
+    <div class="about-menu">
+      <a class="about-toggle">About ▼</a>
+      <div class="about-submenu">
+        <a href="9days.html">About Ganesha</a>
+        <a href="about.html">About Committee</a>
+      </div>
+    </div>
+
+    <a href="ehundi.html">Donation</a>
+    <a href="bookingform.html">Request a Pooja</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact us</a>
+  </div>
+</nav>
+
+
+   
+    <div class="container">
+        <h1>DONATIONS</h1>
+        <div class="donation-box">
+            <h2>Dear Donor's</h2>
+            <p>
+                For 27 years, Maruthi Youth Association has served with devotion and unity.
+Your small donation can make a big difference in continuing our cultural and social service activities.
+                
+                <strong>-MARUTHI YOUTH UTSAV COMMITTEE</strong>
+            </p>
+
+            <div class="qr-section">
+                <img src="images/QR.png" alt="QR Code for Donation">
+                <p class="qr-text">Accoutant Name</p>
+            </div>
+
+            <div class="info-box">
+                <h3>ADDRESS:</h3>
+                <p><strong>MARUTHI YOUTH UTSAV COMMITTEE</strong></p>
+                <p>RAJAMPET(V),SANGAREDDY(M)</p>
+                <p>Sangareddy 502001</p>
+                <p>Telangana, India.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Bank Account Details:</h3>
+                <p><strong></strong></p>
+                <p>A</p>
+                <p>B</p>
+                <p>IFSC CODE</p>
+                <p>location</p>
+            </div>
+        </div>
+    </div>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainMenu = document.getElementById('mainMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  const aboutToggle = document.querySelector('.about-toggle');
+  const aboutSubmenu = document.querySelector('.about-submenu');
+
+  menuToggle.addEventListener('click', () => {
+    mainMenu.classList.add('show');
+    menuToggle.classList.add('hide'); // hide ☰
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mainMenu.classList.remove('show');
+    aboutSubmenu.classList.remove('show');
+    menuToggle.classList.remove('hide'); // show ☰ again
+  });
+
+  aboutToggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      aboutSubmenu.classList.toggle('show');
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<footer class="footer" style="background: black; color: white; padding: 8px 12px; text-align: center; font-size: 0.9rem;">
+  <p style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; align-items: center;">
+    &copy; 2025 Maruthi Youth Association |
+    <a href="contact.html" style="color: white; text-decoration: none; margin: 0 5px; font-weight: bold;"
+       onmouseover="this.style.textDecoration='underline';"
+       onmouseout="this.style.textDecoration='none';">
+      Contact Us
+    </a>
+    <a href="https://www.instagram.com/maruthi_youth?igsh=NTRtbmt0c3YzbjAx" target="_blank" style="color: white; font-size: 1rem; margin-left: 5px;"
+       onmouseover="this.style.color='#E1306C';"
+       onmouseout="this.style.color='white';">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </p>
+
+  <!-- Visitor Counter -->
+  <div style="margin-top: 6px;">
+    <span style="font-size: 0.9rem; color: white; font-family: Verdana, sans-serif;">
+      <strong>Total Visitors:</strong>
+      <span id="lblSiteVisited" style="color: #90ee90; font-weight: bold;">Jai Ganesha...</span>
+    </span>
+  </div>
+</footer>
+
+<script>
+    fetch("https://script.google.com/macros/s/AKfycbzwjryw9lMnXvjVSM1Z1_HKK8Cu_AM0j5W-t48vX7O9VGVktVjl7Afy87ruxn7_8lY-/exec")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("lblSiteVisited").textContent =
+          Number(data.total || 0).toLocaleString();
+      })
+      .catch(error => {
+        console.error("Visitor count error:", error);
+        document.getElementById("lblSiteVisited").textContent = "Unavailable";
+      });
+  </script>
+<div class="mobile-bottom-nav">
+  <a href="index.html">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+  <a href="livesection.html">
+    <i class="fas fa-broadcast-tower"></i>
+    <span>Live</span>
+  </a>
+  <a href="ehundi.html">
+    <i class="fas fa-hand-holding-heart"></i>
+    <span>Donate</span>
+  </a>
+  <a href="gallery.html">
+    <i class="fas fa-images"></i>
+    <span>Gallery</span>
+  </a>
+</div>
+    </body>
+    </html>

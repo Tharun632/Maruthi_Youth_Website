@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style .css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <title>About Ganesha|Maruthi Youth Utsav Committee</title>
+  
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+ background-color:whitesmoke;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+       .blink-text {
+  font-size: 0.7rem;
+  font-weight: bold;
+  animation: blink 3s infinite;
+   transition: color 0.5s ease-in-out;
+  margin-top: 9px;
+}
+
+/* Multicolor blinking animation */
+@keyframes blink {
+  0%   { color: red; }
+  20%  { color: orange; }
+  40%  { color: yellow; }
+  60%  { color: green; }
+  80%  { color: blue; }
+  100% { color: violet; }
+}
+
+      /*Header starts here*/
+      .header {
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  margin-top: 10px;
+  z-index: 1000;
+}
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Header buttons container */
+.header-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* Common styles for both buttons */
+.header-links a {
+  background: #fff;
+  color: #ff5722;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.header-links a:hover {
+  background: #ff5722;
+  color: white;
+}
+
+/* Responsive for small screens */
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 10px 15px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .logo-container img {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .logo-container h1 {
+    display: none; /* Hide text on small screens */
+  }
+
+  .header-links {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 1;
+    overflow-x: auto; /* Ensures links stay in a single line and are scrollable if needed */
+  }
+
+  .header-links a {
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 297px) {
+  .header {
+    padding: 8px 10px;
+  }
+
+  .logo-container img {
+    height: 30px;
+    margin-right: 5px;
+  }
+
+  .logo-container h1 {
+    display: none; /* Ensure logo text is hidden */
+  }
+
+  .header-links {
+    gap: 5px;
+  }
+
+  .header-links a {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+      
+      /*header endes here*/
+
+      .nav {
+  padding: 6px 12px;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #180701;
+  padding: 4px;
+  display: none;
+  z-index: 1100;
+}
+
+.close-icon {
+  font-size: 1rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin: 10%;
+  display: none;
+}
+
+.dropdown {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #ff5722;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown a:hover {
+  background: #ff5722;
+  color: white;
+}
+
+.about-menu {
+  position: relative;
+}
+
+.about-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.about-submenu a {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 769px) {
+  .menu-icon, .close-icon {
+    display: none;
+  }
+
+  .about-menu:hover .about-submenu {
+    display: flex;
+  }
+
+  .dropdown {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 6px 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .dropdown.show {
+    left: 0;
+  }
+
+  .close-icon {
+    display: block;
+  }
+
+  .about-submenu {
+    position: static;
+    box-shadow: none;
+    background: none;
+    padding-left: 20px;
+  }
+
+  .about-submenu a {
+    background: white;
+    border-top: 1px solid #ddd;
+  }
+
+  .about-submenu.show {
+    display: flex;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+     
+
+ 
+
+
+
+h1 {
+      text-align: center;
+      margin: 20px 0 10px;
+      font-size: 2rem;
+      color: #d97706;
+    }
+
+    .language-toggle {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .language-toggle button {
+      margin: 0 10px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #1e3a8a;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .language-toggle button.active {
+      background-color: #f59e0b;
+      color: #000;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 1000px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .section:nth-child(even):not(.language-toggle) {
+      flex-direction: row-reverse;
+    }
+
+    .image {
+      flex: 1;
+      padding: 10px;
+      min-width: 250px;
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .text {
+      flex: 2;
+      padding: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .telugu {
+      display: none;
+      font-family: "Noto Sans Telugu", sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column !important;
+      }
+    }
+/*Mobile Nav starts here*/
+.mobile-bottom-nav {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 4px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  border-top: 1px solid #444;
+}
+
+.mobile-bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-bottom-nav i {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+/* Hide nav on larger screens */
+@media (min-width: 768px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+/*Mobile nav endes here*/
+
+@media(max-width:768px){
+  footer{
+    margin-bottom: 30px;
+    padding-bottom: 70px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="blink-text">
+      ✨ ఏకదంతాయ విద్మహే వక్రతుండాయ ధీమహి తన్నో దంతీ ప్రచోదయాత్ ✨
+    </div>
+
+    <header class="header">
+      <div class="logo-container">
+        <img src="images/logo1.png" alt="Maruthi Youth Association Logo" />
+        <h1>MARUTHI YOUTH UTSAV COMMITEE</h1>
+      </div>
+      <div class="header-links">
+        <a href="livesection.html" target="_blank" class="live-puja-link">
+          Live Puja
+        </a>
+        <a href="ehundi.html" target="_blank" class="e-hundi-link">
+          E-Hundi
+        </a>
+        <a href="bookingform.html" target="_blank" class="e-hundi-link">
+          Pooja Form
+        </a>
+      </div>
+    </header>
+
+    <nav class="nav">
+  <span class="menu-icon" id="menuToggle">☰</span>
+
+  <div class="dropdown" id="mainMenu">
+    <span class="close-icon" id="closeMenu">✖️</span>
+
+    <a href="page.html"><i class="fa fa-home"></i> Home</a>
+
+    <div class="about-menu">
+      <a class="about-toggle">About ▼</a>
+      <div class="about-submenu">
+        <a href="9days.html">About Ganesha</a>
+        <a href="about.html">About Committee</a>
+      </div>
+    </div>
+
+    <a href="ehundi.html">Donation</a>
+    <a href="bookingform.html">Request a Pooja</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact us</a>
+  </div>
+</nav>
+  
+<h1>About Ganesh Deva</h1>
+
+  <div class="language-toggle">
+    <button onclick="setLanguage('english')" class="active" id="btn-en">English</button>
+    <button onclick="setLanguage('telugu')" id="btn-te">తెలుగు</button>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="section">
+    <div class="text">
+      <div class="english">
+        <h2>Birth of Lord Ganesha</h2>
+        <p>According to Hindu mythology, Goddess Parvati created Lord Ganesha from sandalwood paste and brought him to life. She asked him to guard the entrance while she bathed. When Lord Shiva tried to enter, Ganesha stopped him, not knowing who he was. Angered, Shiva beheaded Ganesha. Later, realizing his mistake, Shiva brought him back to life by placing an elephant’s head on him. Thus, Lord Ganesha was born as the remover of obstacles and the god of wisdom.</p>
+      </div>
+      <div class="telugu">
+        <h2>వినాయకుని జననం</h2>
+        <p>హిందూ పురాణాల ప్రకారం, పార్వతి దేవి స్నానం చేయడానికి ముందు, తానే తయారుచేసిన గంధపు పిండితో గణేశుడిని సృష్టించింది. గణేశుడిని తాను లోపల ఉండగా ద్వారం కాపాడమని ఆదేశించింది. ఈ సమయంలో శివుడు లోపలికి రావాలనగా, గణేశుడు అడ్డుకున్నాడు. కోపంతో శివుడు ఆయన తల తొలగించాడు. తరువాత తన తప్పును గ్రహించి, ఒక ఏనుగు తలను అతని శరీరానికి జతచేసి జీవం ప్రసాదించాడు. ఈ విధంగా విఘ్నVinాశకుడైన గణేశుడి జననం జరిగింది.</p>
+      </div>
+    </div>
+    <div class="image">
+      <img src="images/birth.jpg" alt="Lord Ganesha Birth">
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section">
+    <div class="text">
+      <div class="english">
+        <h2>Symbolism</h2>
+        <p>Elephant Head – Represents wisdom, intelligence, and big thinking.
+
+Big Ears – Listen more, absorb knowledge.
+
+Small Eyes – Focus and concentration.
+
+Trunk – Adaptability and strength.
+
+One Tusk – Overcoming duality, holding onto the good.
+
+Big Belly – Ability to peacefully digest all good and bad in life.
+
+Mouse (Vehicle) – Desire, which should be controlled, not eliminated.
+
+Modak (Sweet) – Symbol of inner joy and rewards of spiritual practice.
+
+Axe and Rope – To cut off attachments and pull devotees toward truth.</p>
+      </div>
+      <div class="telugu">
+        <h2>గణేశుని ప్రతీకలు</h2>
+        <p>ఏనుగు తల – జ్ఞానం, తెలివి, విస్తృత దృష్టిని సూచిస్తుంది.
+
+పెద్ద చెవులు – ఎక్కువగా వినాలి, జ్ఞానం గ్రహించాలి.
+
+చిన్న కళ్ళు – ఏకాగ్రత, దృష్టి.
+
+సొంపైన తుంగ – అనువర్తిత్వం, శక్తి.
+
+ఒక్క దంతం – మంచి విషయాలను అంగీకరించి, చెడ్డవాటిని వదలడం.
+
+పెద్ద పొట్ట – జీవితం లోని మంచి చెడ్డ విషయాలను సమానంగా జీర్ణించగల శక్తి.
+
+ఎలుక (వాహనం) – కోరికలను అదుపులో ఉంచాలి.
+
+మోదకం (తీపి) – ఆధ్యాత్మిక సాధన ఫలితంగా కలిగే అంతరాంగ ఆనందం.
+
+కత్తి మరియు కట్టె – బంధాలను కోసి, భక్తులను సత్య మార్గానికి లాగడానికి.</p>
+      </div>
+    </div>
+    <div class="image">
+      <img src="images/bhakti.jpg" alt="Symbolic Ganesha">
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section">
+    <div class="text">
+      <div class="english">
+        <h2>Family of Ganesha</h2> 
+        <p>Lord Ganesha belongs to the divine family of Lord Shiva and Goddess Parvati. His brother is Lord Kartikeya (also known as Subramanya or Murugan). This sacred family represents strength, wisdom, love, and dharma. They are worshipped together as symbols of balance and harmony.</p>
+      </div>
+      <div class="telugu">
+        <h2>గణేశుని కుటుంబం</h2>
+        <p>శ్రీ గణేశుడు పవిత్రమైన శైవ కుటుంబానికి చెందుతారు. ఆయన తండ్రి శివుడు, తల్లి పార్వతి దేవి. ఆయన సోదరుడు కుమారస్వామి లేదా సుబ్రహ్మణ్యుడు. ఈ దైవ కుటుంబం బలాన్ని, జ్ఞానాన్ని, ప్రేమను మరియు ధర్మాన్ని ప్రతిబింబిస్తుంది. వారిని ఐక్యత మరియు సమతుల్యతకు సంకేతంగా పూజిస్తారు.</p>
+      </div>
+    </div>
+    <div class="image">
+      <img src="images/family.jpg" alt="Ganesha Family">
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="section">
+    <div class="text">
+      <div class="english">
+        <h2>Ganesh Chaturthi Festival</h2>
+        <p>Ganesh Chaturthi is a grand festival celebrating the birth of Lord Ganesha, the remover of obstacles and god of wisdom. Devotees welcome Ganesh idols into their homes and communities with devotion, music, and joy. The festival symbolizes new beginnings, unity, and spiritual growth.</p>
+      </div>
+      <div class="telugu">
+        <h2>వినాయక చవితి పండుగ</h2>
+        <p>గణేశ్ చతుర్థి అనేది విఘ్నVinాశకుడైన శ్రీ గణేశుడి జన్మోత్సవంగా జరుపుకుంటారు. భక్తులు గణేశుడిని ఇంటికి మరియు మండపాలకు ఆహ్వానించి, భక్తి, సంగీతం మరియు ఆనందంతో పూజలు నిర్వహిస్తారు. ఈ పండుగ కొత్త ప్రారంభాలు, ఐక్యత మరియు ఆధ్యాత్మిక అభివృద్ధికి సంకేతం.</p>
+      </div>
+    </div>
+    <div class="image">
+      <img src="images/tasha.png" alt="Ganesh Festival">
+    </div>
+  </div>
+   
+   
+ 
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainMenu = document.getElementById('mainMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  const aboutToggle = document.querySelector('.about-toggle');
+  const aboutSubmenu = document.querySelector('.about-submenu');
+
+  menuToggle.addEventListener('click', () => {
+    mainMenu.classList.add('show');
+    menuToggle.classList.add('hide'); // hide ☰
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mainMenu.classList.remove('show');
+    aboutSubmenu.classList.remove('show');
+    menuToggle.classList.remove('hide'); // show ☰ again
+  });
+
+  aboutToggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      aboutSubmenu.classList.toggle('show');
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+   <script>
+    function setLanguage(lang) {
+      const englishTexts = document.querySelectorAll('.english');
+      const teluguTexts = document.querySelectorAll('.telugu');
+      const btnEn = document.getElementById('btn-en');
+      const btnTe = document.getElementById('btn-te');
+
+      if (lang === 'english') {
+        englishTexts.forEach(el => el.style.display = 'block');
+        teluguTexts.forEach(el => el.style.display = 'none');
+        btnEn.classList.add('active');
+        btnTe.classList.remove('active');
+      } else {
+        englishTexts.forEach(el => el.style.display = 'none');
+        teluguTexts.forEach(el => el.style.display = 'block');
+        btnEn.classList.remove('active');
+        btnTe.classList.add('active');
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<footer class="footer" style="background: black; color: white; padding: 8px 12px; text-align: center; font-size: 0.9rem;">
+  <p style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; align-items: center;">
+    &copy; 2025 Maruthi Youth Association |
+    <a href="contact.html" style="color: white; text-decoration: none; margin: 0 5px; font-weight: bold;"
+       onmouseover="this.style.textDecoration='underline';"
+       onmouseout="this.style.textDecoration='none';">
+      Contact Us
+    </a>
+    <a href="https://www.instagram.com/maruthi_youth?igsh=NTRtbmt0c3YzbjAx" target="_blank" style="color: white; font-size: 1rem; margin-left: 5px;"
+       onmouseover="this.style.color='#E1306C';"
+       onmouseout="this.style.color='white';">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </p>
+
+  <!-- Visitor Counter -->
+  <div style="margin-top: 6px;">
+    <span style="font-size: 0.9rem; color: white; font-family: Verdana, sans-serif;">
+      <strong>Total Visitors:</strong>
+      <span id="lblSiteVisited" style="color: #90ee90; font-weight: bold;">Jai Ganesha...</span>
+    </span>
+  </div>
+</footer>
+<script>
+    const cards = document.querySelectorAll('.day-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(50px)';
+      card.style.transition = 'all 0.6s ease-out';
+      observer.observe(card);
+    });
+  </script>
+
+
+<script>
+    fetch("https://script.google.com/macros/s/AKfycbzwjryw9lMnXvjVSM1Z1_HKK8Cu_AM0j5W-t48vX7O9VGVktVjl7Afy87ruxn7_8lY-/exec")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("lblSiteVisited").textContent =
+          Number(data.total || 0).toLocaleString();
+      })
+      .catch(error => {
+        console.error("Visitor count error:", error);
+        document.getElementById("lblSiteVisited").textContent = "Unavailable";
+      });
+  </script>
+<div class="mobile-bottom-nav">
+  <a href="index.html">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+  <a href="livesection.html">
+    <i class="fas fa-broadcast-tower"></i>
+    <span>Live</span>
+  </a>
+  <a href="ehundi.html">
+    <i class="fas fa-hand-holding-heart"></i>
+    <span>Donate</span>
+  </a>
+  <a href="gallery.html">
+    <i class="fas fa-images"></i>
+    <span>Gallery</span>
+  </a>
+</div>
+</body>
+</html>

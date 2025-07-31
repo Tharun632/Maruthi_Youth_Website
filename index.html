@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style .css" />
+     <link rel="icon" type="image/x-icon" href="images/favicon.svg" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <title>Home | Maruthi Youth Utsav Committee</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+  
+       
+        background-color:whitesmoke;
+        color: #333;
+        line-height: 1.6;
+        text-align: center;
+        position: relative;
+      }
+
+      
+     .blink-text {
+  font-size: 0.7rem;
+  font-weight: bold;
+  animation: blink 3s infinite;
+   transition: color 0.5s ease-in-out;
+  margin-top: 9px;
+}
+
+/* Multicolor blinking animation */
+@keyframes blink {
+  0%   { color: red; }
+  20%  { color: orange; }
+  40%  { color: yellow; }
+  60%  { color: green; }
+  80%  { color: blue; }
+  100% { color: violet; }
+}
+
+     
+
+      /*Header starts here*/
+      .header {
+  background: #5a1e04;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  margin-top: 10px;
+  z-index: 1000;
+}
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* Header buttons container */
+.header-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* Common styles for both buttons */
+.header-links a {
+  background: #fff;
+  color: #ff5722;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.header-links a:hover {
+  background: #ff5722;
+  color: white;
+}
+
+/* Responsive for small screens */
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 10px 15px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .logo-container img {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .logo-container h1 {
+    display: none; /* Hide text on small screens */
+  }
+
+  .header-links {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 1;
+    overflow-x: auto; /* Ensures links stay in a single line and are scrollable if needed */
+  }
+
+  .header-links a {
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 297px) {
+  .header {
+    padding: 8px 10px;
+  }
+
+  .logo-container img {
+    height: 30px;
+    margin-right: 5px;
+  }
+
+  .logo-container h1 {
+    display: none; /* Ensure logo text is hidden */
+  }
+
+  .header-links {
+    gap: 5px;
+  }
+
+  .header-links a {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+
+
+
+   
+/*about ends here*/
+.banner {
+            width: 100%;
+            overflow: hidden;
+        }
+        .banner-slider img {
+            width: 100%;
+            height: auto;
+        }
+      
+        /*Home section ends here*/
+     
+      .image-gallery {
+    text-align: center;
+    padding: 40px 20px;
+    background:transparent;
+  }
+
+  .image-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #8b0000;
+  }
+
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .gallery-item {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 300px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .year-label {
+    background: #d32f2f;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .gallery-container {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding-bottom: 10px;
+    }
+
+    .gallery-item {
+      flex: 0 0 auto;
+    }
+  }
+
+ 
+   /* Section Styling with Scroll Animation */
+.updates-section {
+  border: 2px solid #ccc;
+  background-color: #fff8e1;
+  padding: 20px 10px;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Visible class triggers animation */
+.updates-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Heading Styling */
+.updates-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #e65100;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Container Flex Layout */
+.updates-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Individual Update Card */
+.update-card {
+  background: #fff;
+  border-left: 4px solid #ff9800;
+  border-radius: 6px;
+  padding: 10px 15px;
+  max-width: 300px;
+  font-size: 0.9em;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect for Card */
+.update-card:hover {
+  background-color: #fff3e0;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .updates-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .update-card {
+    width: 90%;
+  }
+}
+/*updates section ends here*/
+
+/*countdown line section starts here*/
+    
+    .countdown-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: #fff3e0;
+  color: #b23c00;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 12px;
+      border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: fit-content;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.count-label {
+  font-weight: 700;
+  margin-right: 8px;
+  color: #d14b00;
+}
+
+/* Responsive font size */
+@media (max-width: 480px) {
+  .countdown-line {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+    
+    /* video Section Container */
+.srisaila-section {
+  background-color: #2e3192; /* Deep blue background */
+  color: #ffffff; /* White text */
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Layout for desktop */
+.srisaila-section .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Text Area */
+.text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+.text-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+
+
+
+
+/* Video Area */
+.video-content {
+  flex: 1;
+  min-width: 300px;
+  aspect-ratio: 16/9;
+}
+
+.video-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Fix extra spacing between text and video */
+.text-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.video-content {
+  margin-top: 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .srisaila-section .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-content, .video-content {
+    width: 100%;
+  }
+
+  .text-content h1 {
+    text-align: center;
+  }
+
+  .watch-button {
+    display: block;
+    width: fit-content;
+    margin: 10px auto 0;
+  }
+}
+    .news-bar {
+  background-color: transparent;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.news-label {
+  font-weight: bold;
+  color: #a1160a;
+  white-space: nowrap;
+}
+
+.news-ticker-container {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+  min-width: 150px;
+}
+
+.news-ticker {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+  color: #a1160a;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.view-all-btn {
+  background-color: #a1160a;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.view-all-btn:hover {
+  background-color: #7e0c05;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .news-label {
+    font-size: 14px;
+  }
+
+  .news-ticker {
+    font-size: 13px;
+  }
+
+  .view-all-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+  
+   
+    
+    
+    
+    
+    
+    
+    /*Nav section starts here*/
+    .nav {
+  padding: 6px 12px;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #180701;
+  padding: 4px;
+  display: none;
+  z-index: 1100;
+}
+
+.close-icon {
+  font-size: 1rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin: 10%;
+  display: none;
+}
+
+.dropdown {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #ff5722;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown a:hover {
+  background: #ff5722;
+  color: white;
+}
+
+.about-menu {
+  position: relative;
+}
+
+.about-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.about-submenu a {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 769px) {
+  .menu-icon, .close-icon {
+    display: none;
+  }
+
+  .about-menu:hover .about-submenu {
+    display: flex;
+  }
+
+  .dropdown {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 6px 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .dropdown.show {
+    left: 0;
+  }
+
+  .close-icon {
+    display: block;
+  }
+
+  .about-submenu {
+    position: static;
+    box-shadow: none;
+    background: none;
+    padding-left: 20px;
+  }
+
+  .about-submenu a {
+    background: white;
+    border-top: 1px solid #ddd;
+  }
+
+  .about-submenu.show {
+    display: flex;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+      
+/*Nav ends here*/
+    .story-container {
+  border: 1px solid #ccc;
+  padding: 5px;
+  overflow-x: auto;
+  display: flex;
+  gap: 15px;
+  scrollbar-width: none;
+}
+
+.story-container::-webkit-scrollbar {
+  display: none;
+}
+
+.story {
+  text-align: center;
+  cursor: pointer;
+}
+
+.story .img-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.story img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #000;
+  object-fit: cover;
+}
+
+.story p {
+  margin-top: 5px;
+  font-size: 12px;
+  max-width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 20px;
+}
+
+.modal .year {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .story .img-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .story p {
+    font-size: 10px;
+  }
+}
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 9999; /* 👈 higher than navbar */
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.home-gallery {
+  padding: 10px 20px;
+  background: transparent;
+  text-align: center;
+}
+
+.home-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.see-more {
+  margin-top: 20px;
+}
+
+.see-more a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.see-more a:hover {
+  background-color: #444;
+}
+
+.aboutpara{
+  text-align: justify;
+}
+
+
+
+ 
+  .counter-container {
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+    font-family: Verdana, sans-serif;
+    flex-wrap: wrap;
+  }
+
+  .counter-box {
+    padding: 10px 14px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 120px;
+    max-width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  .counter-title {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .counter-value {
+    font-size: 24px;
+    color: #1b5e20;
+    font-weight: bold;
+  }
+
+  @media (max-width: 500px) {
+    .counter-box {
+      padding: 8px 10px;
+    }
+
+    .counter-title {
+      font-size: 14px;
+    }
+
+    .counter-value {
+      font-size: 20px;
+    }
+  }
+
+/*Mobile Nav section*/
+.mobile-bottom-nav {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 4px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  border-top: 1px solid #444;
+}
+
+.mobile-bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-bottom-nav i {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+/* Hide nav on larger screens */
+@media (min-width: 768px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+/*Mobile nav endes here*/
+
+@media(max-width:768px){
+  footer{
+    margin-bottom: 30px;
+    padding-bottom: 70px;
+  }
+}
+
+/*home about starts here*/
+  
+    
+    </style>
+  </head>
+  <body>
+    <div class="blink-text">
+      ✨ ఏకదంతాయ విద్మహే వక్రతుండాయ ధీమహి తన్నో దంతీ ప్రచోదయాత్ ✨
+    </div>
+
+    <header class="header">
+      <div class="logo-container">
+        <img src="images/logo1.png" alt="Maruthi Youth Association Logo" />
+        <h1>MARUTHI YOUTH UTSAV COMMITEE</h1>
+      </div>
+      <div class="header-links">
+        <a href="livesection.html" target="_blank" class="live-puja-link">
+          Live Puja
+        </a>
+        <a href="ehundi.html" target="_blank" class="e-hundi-link">
+          E-Hundi
+        </a>
+        <a href="bookingform.html" target="_blank" class="e-hundi-link">
+          Pooja Form
+        </a>
+      </div>
+    </header>
+    
+
+    <nav class="nav">
+  <span class="menu-icon" id="menuToggle">☰</span>
+
+  <div class="dropdown" id="mainMenu">
+    <span class="close-icon" id="closeMenu">✖️</span>
+
+    <a href="page.html">Home</a>
+
+    <div class="about-menu">
+      <a class="about-toggle">About ▼</a>
+      <div class="about-submenu">
+        <a href="9days.html">About Ganesha</a>
+        <a href="about.html">About Committee</a>
+      </div>
+    </div>
+    <a href="donations.html">Donation</a>
+    <a href="bookingform.html">Request a Pooja</a>
+    <a href="gallery.html">Gallery</a>
+     <a href="contact.html">Contact us</a>
+  </div>
+</nav>
+    
+    <div class="story-container" id="storyGallery">
+  <div class="story" onclick="openModal('ABC.png', '2024')">
+    <div class="img-wrapper">
+      <img src="images/ABC.png" alt="2024">
+    </div>
+    <p>2024</p>
+  </div>
+</div>
+    
+
+<div class="modal" id="imageModal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img id="modalImage" src="" alt="Modal Image">
+  <div class="year" id="modalYear"></div>
+</div>
+    
+    <div class="news-bar">
+  <div class="news-label">News Update</div>
+  <div class="news-ticker-container">
+    <div class="news-ticker" id="newsTicker">
+      hello: Admission open for 2025 batch | Sports fest on July 5th | Happy Yoga Day to all! | Stay tuned for more updates!
+    </div>
+  </div>
+</div>
+    
+    <br>
+    <div class="banner">
+      <div class="banner-slider">
+         <img src="images/MBanner.png" alt="Banner 1">
+         <img src="images/maruthi youth ustav committee.png" alt="Banner 1">
+         <img src="images/banner7.png" alt="Banner 1">
+          <img src="images/A5.png" alt="Banner 1">
+          <img src="images/slider2.png" alt="Banner 1">
+        
+      </div>
+  </div>
+    
+    <section class="countdown-line">
+  <span class="count-label">⏳ Ganesh Festival in:</span>
+  <span id="days">00</span>d :
+  <span id="hours">00</span>h :
+  <span id="minutes">00</span>m :
+  <span id="seconds">00</span>s
+</section>
+    
+
+
+
+    <section class="image-gallery">
+      <h2>27<sup>th</sup> Year of Ganesh Celebrations</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="images/2024.jpg" alt="Devotional Image 1">
+          <div class="year-label">2024</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/2023A.jpeg" alt="Devotional Image 2">
+          <div class="year-label">2023</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/request-image.jpg" alt="Devotional Image 3">
+          <div class="year-label">2022</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/ganesh1.jpg" alt="Devotional Image 4">
+          <div class="year-label">2021</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/2020A.jpeg" alt="Devotional Image 5">
+          <div class="year-label">2020</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/2019A.jpeg" alt="Devotional Image 2">
+          <div class="year-label">2019</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/about-logo.jpg" alt="Devotional Image 6">
+          <div class="year-label">2018</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="updates-section">
+  <h2>Updates</h2>
+  <div class="updates-container">
+    <div class="update-card">
+      <p><strong>August 27:</strong> Updating....</p>
+    </div>
+    
+    <div class="update-card">
+      <p><strong>August 27:</strong>Updating...</p>
+    </div>
+    <div class="update-card">
+      <p><strong>August 27:</strong> updating.....</p>
+    </div>
+  </div>
+</section><br>
+    
+    <section class="py-12 px-4 sm:px-6 lg:px-16 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+    <p class="text-lg max-w-3xl mx-auto mb-12">
+      For over two decades, Maruthi Youth Utsav Committee has been a beacon of hope and unity in our community.
+      We are dedicated to preserving our cultural heritage while serving those in need through devotion, compassion, and unwavering commitment to social welfare.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      
+      <!-- Devotion -->
+      <div class="bg-white shadow-md rounded-xl p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <img src="https://img.icons8.com/color/96/000000/prayer.png" alt="Devotion" class="mb-4 w-12 h-12 transition-transform duration-300 hover:scale-110"/>
+        <h3 class="text-xl font-semibold mb-2">Devotion</h3>
+        <p class="text-gray-600 text-sm">Spiritual dedication and reverence in all our endeavors</p>
+      </div>
+
+      <!-- Unity -->
+      <div class="bg-white shadow-md rounded-xl p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <img src="https://img.icons8.com/color/96/000000/handshake.png" alt="Unity" class="mb-4 w-12 h-12 transition-transform duration-300 hover:scale-110"/>
+        <h3 class="text-xl font-semibold mb-2">Unity</h3>
+        <p class="text-gray-600 text-sm">Bringing communities together across all boundaries</p>
+      </div>
+
+      <!-- Service -->
+      <div class="bg-white shadow-md rounded-xl p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <img src="https://img.icons8.com/color/96/000000/like--v1.png" alt="Service" class="mb-4 w-12 h-12 transition-transform duration-300 hover:scale-110"/>
+        <h3 class="text-xl font-semibold mb-2">Service</h3>
+        <p class="text-gray-600 text-sm">Selfless dedication to helping those in need</p>
+      </div>
+
+      <!-- Culture -->
+      <div class="bg-white shadow-md rounded-xl p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <img src="https://img.icons8.com/color/96/000000/theatre-mask.png" alt="Culture" class="mb-4 w-12 h-12 transition-transform duration-300 hover:scale-110"/>
+        <h3 class="text-xl font-semibold mb-2">Culture</h3>
+        <p class="text-gray-600 text-sm">Preserving and celebrating our rich traditions</p>
+      </div>
+
+    </div>
+  </section>
+    
+    <section class="home-gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="images/Logo-Header.jpg" alt="Ritual">
+    <img src="images/shadow.jpg" alt="Chariot">
+    <img src="Images/group2.jpg" alt="Group Pooja">
+    <img src="images/childerns.jpg" alt="Decorated Idol">
+  </div>
+  <div class="see-more">
+    <a href="gallery.html">See More</a>
+  </div>
+</section>
+
+     
+   
+
+  <section class="srisaila-section">
+  <div class="container">
+    <div class="text-content">
+      <h1>Visarjan 2020</h1>
+      <p>
+         🙏 శ్రీ గణేశాయ నమః 🙏
+మారుతి యూత్ అసోసియేషన్ - 2020 గణేష్ విసర్జన
+      </p>
+    </div>
+    <div class="video-content">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/piBvat0QGKQ" 
+        title="Srisailam Teaser Official HD"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+    </section>
+
+    <!-- Add this in your <head> if not already included -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<footer class="footer" style="background: black; color: white; padding: 8px 12px; text-align: center; font-size: 0.9rem;">
+  <p style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; align-items: center;">
+    &copy; 2025 Maruthi Youth |
+    <a href="contact.html" style="color: white; text-decoration: none; margin: 0 5px; font-weight: bold;"
+       onmouseover="this.style.textDecoration='underline';"
+       onmouseout="this.style.textDecoration='none';">
+      Contact Us
+    </a>
+    <a href="https://www.instagram.com/maruthi_youth?igsh=NTRtbmt0c3YzbjAx" target="_blank" style="color: white; font-size: 1rem; margin-left: 5px;"
+       onmouseover="this.style.color='#E1306C';"
+       onmouseout="this.style.color='white';">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </p>
+
+  <!-- Visitor Counter -->
+  <div style="margin-top: 6px;">
+    <span style="font-size: 0.9rem; color: white; font-family: Verdana, sans-serif;">
+      <strong>Total Visitors:</strong>
+      <span id="lblSiteVisited" style="color: #90ee90; font-weight: bold;">Jai Ganesha...</span>
+    </span>
+  </div>
+</footer>
+
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainMenu = document.getElementById('mainMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  const aboutToggle = document.querySelector('.about-toggle');
+  const aboutSubmenu = document.querySelector('.about-submenu');
+
+  menuToggle.addEventListener('click', () => {
+    mainMenu.classList.add('show');
+    menuToggle.classList.add('hide'); // hide ☰
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mainMenu.classList.remove('show');
+    aboutSubmenu.classList.remove('show');
+    menuToggle.classList.remove('hide'); // show ☰ again
+  });
+
+  aboutToggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      aboutSubmenu.classList.toggle('show');
+    }
+  });
+</script>
+    <script>
+      $(document).ready(function(){
+          $('.banner-slider').slick({
+              autoplay: true,
+              autoplaySpeed: 2000,
+              dots: true,
+              arrows: false,
+              fade: true,
+          });
+      });
+  </script>
+    
+   
+    
+    <script>
+  const festivalDate = new Date("August 27, 2025 00:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const gap = festivalDate - now;
+
+    const second = 1000;
+    const minute = 60 * second;
+    const hour = 60 * minute;
+    const day = 24 * hour;
+
+    const d = Math.floor(gap / day);
+    const h = Math.floor((gap % day) / hour);
+    const m = Math.floor((gap % hour) / minute);
+    const s = Math.floor((gap % minute) / second);
+
+    document.getElementById("days").textContent = d < 10 ? '0' + d : d;
+    document.getElementById("hours").textContent = h < 10 ? '0' + h : h;
+    document.getElementById("minutes").textContent = m < 10 ? '0' + m : m;
+    document.getElementById("seconds").textContent = s < 10 ? '0' + s : s;
+
+    if (gap <= 0) {
+      document.querySelector(".countdown-line").textContent = "🙏 Ganesh Festival Has Started!";
+      clearInterval(timer);
+    }
+  }
+
+  const timer = setInterval(updateCountdown, 1000);
+  updateCountdown(); // initial run
+</script>
+    
+    <script>
+    const newsItems = [
+  "Updating.....",
+  "వినాయక చవితి శుభాకాంక్షలు",
+  "Stay tuned for more updates!"
+];
+
+document.getElementById("newsTicker").innerText = newsItems.join(" | ");
+    </script>
+    
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".updates-section");
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            section.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 1,
+      }
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+  });
+</script>
+    
+    <script>
+    function openModal(src, year) {
+  document.getElementById('modalImage').src = src;
+  document.getElementById('modalYear').textContent = year;
+  document.getElementById('imageModal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('imageModal').style.display = 'none';
+}
+    
+    </script>
+
+<script>
+    fetch("https://script.google.com/macros/s/AKfycbzwjryw9lMnXvjVSM1Z1_HKK8Cu_AM0j5W-t48vX7O9VGVktVjl7Afy87ruxn7_8lY-/exec")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("lblSiteVisited").textContent =
+          Number(data.total || 0).toLocaleString();
+      })
+      .catch(error => {
+        console.error("Visitor count error:", error);
+        document.getElementById("lblSiteVisited").textContent = "Unavailable";
+      });
+  </script>
+<div class="mobile-bottom-nav">
+  <a href="index.html">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+  <a href="livesection.html">
+    <i class="fas fa-broadcast-tower"></i>
+    <span>Live</span>
+  </a>
+  <a href="ehundi.html">
+    <i class="fas fa-hand-holding-heart"></i>
+    <span>Donate</span>
+  </a>
+  <a href="gallery.html">
+    <i class="fas fa-images"></i>
+    <span>Gallery</span>
+  </a>
+</div>
+  </body>
+</html>
