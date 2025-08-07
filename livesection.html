@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ganesh Pooja Live</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ganesh Pooja Poster</title>
   <style>
-    /* Reset & Base Styles */
     * {
       margin: 0;
       padding: 0;
@@ -13,45 +12,62 @@
     }
 
     body {
-      background-color: #e6f7ff; /* Light background */
+      background-color: #e6f7ff;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      font-family: sans-serif;
     }
 
-    .poster-container {
-      width: 100%;
-      max-width: 500px;
-      padding: 10px;
+    .poster-frame {
+      width: 90%;
+      max-width: 400px; /* Default size for mobile */
+      margin: auto;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
     }
 
-    .poster-container img {
+    .poster-frame img {
       width: 100%;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: block;
     }
 
-    /* Tablet View */
-    @media (min-width: 600px) {
-      .poster-container {
-        max-width: 700px;
+    /* Tablet screens */
+    @media (min-width: 768px) {
+      .poster-frame {
+        max-width: 600px;
+      }
+
+      .poster-frame img {
+        content: url('images/Live2_pic.png'); /* Swap image for larger screen */
       }
     }
 
-    /* Desktop View */
+    /* Desktop screens */
     @media (min-width: 1024px) {
-      .poster-container {
-        max-width: 900px;
+      .poster-frame {
+        max-width: 800px;
+      }
+    }
+
+    /* Large desktop screens */
+    @media (min-width: 1400px) {
+      .poster-frame {
+        max-width: 1000px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="poster-container">
-    <img src="images/Live_pic.png" alt="Ganesh Pooja Live From 27th August">
+
+  <div class="poster-frame">
+    <img src="images/Live_pic.png" alt="Ganesh Pooja Poster" />
   </div>
+
 </body>
 </html>
