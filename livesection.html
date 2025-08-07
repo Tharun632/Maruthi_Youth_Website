@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganesh Pooja Live</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #e6f7ff; /* Light background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: sans-serif;
+    }
+
+    .poster-container {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+    }
+
+    .poster-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Tablet View */
+    @media (min-width: 600px) {
+      .poster-container {
+        max-width: 700px;
+      }
+    }
+
+    /* Desktop View */
+    @media (min-width: 1024px) {
+      .poster-container {
+        max-width: 900px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="poster-container">
+    <img src="images/Live_pic.png" alt="Ganesh Pooja Live From 27th August">
+  </div>
+</body>
+</html>
